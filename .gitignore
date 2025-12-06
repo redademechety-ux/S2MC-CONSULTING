@@ -64,4 +64,7 @@ Thumbs.db
 # Package archives
 *.tar.gz
 *.tgz
-*.zip
+*.zip-e 
+# Environment files
+*.env
+*.env.*
