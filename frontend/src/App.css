@@ -1,34 +1,201 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+:root {
+  /* Backgrounds - Pixel Pushers Colors */
+  --bg-page: #1a1c1b;
+  --bg-card: #302f2c;
+  --bg-light: #dfddd6;
+  
+  /* Text - Pixel Pushers Colors */
+  --text-primary: #d9fb06;
+  --text-secondary: #888680;
+  --text-muted: #302f2c;
+  --text-inverse: #1a1c1b;
+  
+  /* Borders - Pixel Pushers Colors */
+  --border-light: rgba(63, 72, 22, 0.5);
+  --border-medium: #3f4816;
+  --border-strong: #888680;
+  
+  /* Brand Colors */
+  --brand-primary: #d9fb06;
+  --brand-hover: rgba(217, 251, 6, 0.8);
+  --brand-active: rgba(217, 251, 6, 0.6);
+  
+  /* Supporting Colors */
+  --secondary-olive: #3f4816;
+  --secondary-yellow: #f8d47a;
+  --neutral-white: white;
+  --neutral-light: #dfddd6;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+.App {
+  background-color: var(--bg-page);
+  min-height: 100vh;
+  color: var(--text-primary);
 }
 
-.App-link {
-    color: #61dafb;
+/* Typography Classes */
+.brand-display {
+  font-family: 'PP Right Grotesk', Arial, sans-serif;
+  font-weight: 900;
+  font-size: clamp(4rem, 5.2571rem + 3.0476vw, 8rem);
+  line-height: 0.9;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0px;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+.heading-1 {
+  font-family: 'PP Right Grotesk', Arial, sans-serif;
+  font-weight: 900;
+  font-size: clamp(3rem, 4rem + 2vw, 6rem);
+  line-height: 0.9;
+  text-transform: uppercase;
+  color: var(--text-primary);
+}
+
+.heading-2 {
+  font-family: 'PP Right Grotesk', Arial, sans-serif;
+  font-weight: 900;
+  font-size: clamp(2rem, 3rem + 1.5vw, 4rem);
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--text-primary);
+}
+
+.heading-3 {
+  font-family: 'PP Right Grotesk', Arial, sans-serif;
+  font-weight: 900;
+  font-size: clamp(1.5rem, 2rem + 1vw, 3rem);
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--text-primary);
+}
+
+.body-large {
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  color: var(--text-primary);
+}
+
+.body-medium {
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.body-small {
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+/* Button Styles */
+.btn-primary {
+  background: var(--brand-primary);
+  color: var(--text-inverse);
+  border: none;
+  border-radius: 10rem;
+  padding: 1em 2em;
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  min-height: 48px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.1em;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+}
+
+.btn-primary:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--brand-primary);
+  border: 1px solid var(--brand-primary);
+  border-radius: 10rem;
+  padding: 1em 2em;
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-height: 48px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.1em;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+}
+
+.btn-secondary:hover {
+  background: var(--brand-primary);
+  color: var(--text-inverse);
+  transform: scale(1.02);
+}
+
+.btn-secondary:active {
+  transform: scale(0.98);
+}
+
+/* Container System */
+.container {
+  max-width: 87.5rem;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* Spacing System */
+.space-8 { margin: 8px; }
+.space-20 { margin: 20px; }
+.space-40 { margin: 40px; }
+.space-96 { margin: 96px; }
+.space-120 { margin: 120px; }
+
+.pad-8 { padding: 8px; }
+.pad-20 { padding: 20px; }
+.pad-40 { padding: 40px; }
+.pad-96 { padding: 96px; }
+.pad-120 { padding: 120px; }
+
+/* Responsive */
+@media (max-width: 767px) {
+  .container {
+    padding: 0 20px;
+  }
+  
+  .brand-display {
+    font-size: clamp(3rem, 8vw, 5rem);
+  }
+  
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    min-height: 52px;
+  }
 }

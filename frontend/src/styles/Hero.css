@@ -1,0 +1,60 @@
+.hero-section {
+  background: var(--bg-page);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 120px 0 80px;
+}
+
+.hero-content {
+  max-width: 900px;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-subtitle {
+  margin-top: 32px;
+  max-width: 600px;
+}
+
+.hero-description {
+  margin-top: 24px;
+  max-width: 600px;
+}
+
+.hero-cta {
+  margin-top: 48px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 767px) {
+  .hero-section {
+    padding: 100px 0 60px;
+    min-height: 90vh;
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .hero-cta {
+    margin-top: 32px;
+  }
+}

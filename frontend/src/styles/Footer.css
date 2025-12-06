@@ -1,0 +1,49 @@
+.footer {
+  background-color: var(--bg-page);
+  border-top: 1px solid var(--border-medium);
+  padding: 64px 0 32px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.footer-brand {
+  text-align: center;
+}
+
+.footer-logo {
+  font-family: 'PP Right Grotesk', Arial, sans-serif;
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: var(--brand-primary);
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+.footer-tagline {
+  margin-top: 12px;
+  color: var(--text-secondary);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 32px;
+  border-top: 1px solid var(--border-light);
+}
+
+.footer-copyright {
+  color: var(--text-secondary);
+}
+
+@media (max-width: 767px) {
+  .footer {
+    padding: 48px 0 24px;
+  }
+
+  .footer-content {
+    gap: 32px;
+  }
+}
