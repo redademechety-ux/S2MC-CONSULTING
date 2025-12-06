@@ -1,0 +1,153 @@
+================================================================================
+           GUIDE D'INSTALLATION - S2MC CONSULTING WEBSITE
+================================================================================
+
+Bienvenue ! Ce package contient tout ce dont vous avez besoin pour installer
+votre site web S2MC Consulting sur un serveur Linux.
+
+================================================================================
+                           M\u00c9THODE RECOMMAND\u00c9E
+================================================================================
+
+\u2705 INSTALLATION AUTOMATIQUE (La plus simple)
+
+1. Transf\u00e9rez ce dossier sur votre serveur Linux :
+   scp -r deployment/ user@votre-serveur.com:/tmp/
+
+2. Connectez-vous au serveur :
+   ssh user@votre-serveur.com
+
+3. Ex\u00e9cutez le script d'installation :
+   cd /tmp/deployment
+   sudo ./install.sh
+
+4. Suivez les instructions \u00e0 l'\u00e9cran !
+
+Le script va :
+- Installer Node.js et Yarn
+- Installer Apache ou Nginx (votre choix)
+- Builder l'application
+- Configurer le serveur web
+- Configurer SSL (optionnel)
+
+================================================================================
+                         FICHIERS IMPORTANTS
+================================================================================
+
+\ud83d\udcdd README.md              - Documentation compl\u00e8te (en anglais)
+\ud83d\ude80 QUICK_START.md         - Guide rapide (en anglais)
+\ud83d\udcbb install.sh            - Script d'installation automatique
+\ud83d\udd04 update.sh             - Script de mise \u00e0 jour
+\ud83d\udce6 create-package.sh     - Cr\u00e9er un package d\u00e9ployable
+\u2699\ufe0f  apache-multisite.conf - Configuration Apache exemple
+\u2699\ufe0f  nginx-multisite.conf  - Configuration Nginx exemple
+
+================================================================================
+                      PR\u00c9REQUIS SERVEUR
+================================================================================
+
+\u2714 Serveur Linux (Ubuntu 20.04+, Debian 10+, CentOS 8+)
+\u2714 Acc\u00e8s root ou sudo
+\u2714 Connexion Internet
+\u2714 Nom de domaine (recommand\u00e9)
+\u2714 Au moins 1GB de RAM
+\u2714 Au moins 2GB d'espace disque libre
+
+================================================================================
+                        CONFIGURATION DNS
+================================================================================
+
+Avant l'installation, configurez vos DNS :
+
+Type    Nom     Valeur
+-------------------------------
+A       @       IP_DU_SERVEUR
+A       www     IP_DU_SERVEUR
+
+Attendez 5-10 minutes pour la propagation.
+
+================================================================================
+                    INSTALLATION MANUELLE
+================================================================================
+
+Si vous pr\u00e9f\u00e9rez une installation manuelle :
+
+1. Builder l'application localement :
+   cd frontend
+   yarn install
+   yarn build
+
+2. Transf\u00e9rer le dossier 'build' :
+   scp -r build/* user@serveur:/var/www/html/
+
+3. Configurer Apache ou Nginx avec les fichiers .conf fournis
+
+4. Red\u00e9marrer le serveur web
+
+Consultez README.md pour les d\u00e9tails complets.
+
+================================================================================
+                         SSL / HTTPS
+================================================================================
+
+Pour activer HTTPS avec un certificat gratuit :
+
+sudo apt-get install certbot python3-certbot-apache
+sudo certbot --apache -d votre-domaine.com
+
+Le script d'installation peut le faire automatiquement pour vous !
+
+================================================================================
+                    MISE \u00c0 JOUR DU SITE
+================================================================================
+
+Pour mettre \u00e0 jour le contenu apr\u00e8s modification :
+
+sudo ./update.sh
+
+Une sauvegarde automatique sera cr\u00e9\u00e9e avant chaque mise \u00e0 jour.
+
+================================================================================
+                          SUPPORT
+================================================================================
+
+En cas de probl\u00e8me :
+
+1. V\u00e9rifiez les logs :
+   - Apache : sudo tail -f /var/log/apache2/error.log
+   - Nginx : sudo tail -f /var/log/nginx/error.log
+
+2. V\u00e9rifiez le statut du service :
+   sudo systemctl status apache2
+   sudo systemctl status nginx
+
+3. V\u00e9rifiez les permissions :
+   ls -la /var/www/s2mc-consulting
+
+4. Consultez README.md pour le d\u00e9pannage d\u00e9taill\u00e9
+
+================================================================================
+                     INFORMATIONS TECHNIQUES
+================================================================================
+
+\ud83c\udf10 Site web : Site vitrine monopage (SPA)
+\u2699\ufe0f  Framework : React 19
+\ud83c\udfa8 Design : Tailwind CSS + shadcn/ui
+\ud83d\udcbb Serveur : Apache ou Nginx
+\ud83d\udd12 SSL : Let's Encrypt (gratuit)
+\ud83d\udcca Optimisations : Compression GZIP, cache navigateur
+
+================================================================================
+                   VOUS \u00caTES PR\u00caT !
+================================================================================
+
+Pour d\u00e9marrer l'installation :
+
+    cd deployment
+    sudo ./install.sh
+
+Pour toute question, consultez les fichiers README.md et QUICK_START.md
+
+Bonne installation ! \ud83d\ude80
+
+================================================================================
