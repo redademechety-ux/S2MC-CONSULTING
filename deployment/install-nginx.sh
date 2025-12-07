@@ -132,7 +132,7 @@ yarn build
 print_success "Application buildée"
 
 # 7. Configuration de Nginx
-print_info "Configuration de Nginx...
+print_info "Configuration de Nginx..."
 
 cat > /etc/nginx/sites-available/$DOMAIN_NAME << EOF
 server {
