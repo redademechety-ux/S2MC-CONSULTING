@@ -243,8 +243,8 @@ All rights reserved © 2025 S2MC Consulting
 
 ### For Deployment Issues
 
-1. Check Nginx logs: `sudo tail -f /var/log/nginx/S2MC-consulting.com-error.log`
-2. Verify permissions: `ls -la /var/www/S2MC-consulting`
+1. Check Nginx logs: `sudo tail -f /var/log/nginx/s2mc-consulting.com-error.log`
+2. Verify permissions: `ls -la /var/www/s2mc-consulting`
 3. Test Nginx config: `sudo nginx -t`
 4. Restart Nginx: `sudo systemctl restart nginx`
 
