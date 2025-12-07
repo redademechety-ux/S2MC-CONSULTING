@@ -34,7 +34,7 @@ if [ "$EUID" -ne 0 ]; then
 fi
 
 # Configuration par défaut
-DEFAULT_PATH="/var/www/S2MC-consulting"
+DEFAULT_PATH="/var/www/s2mc-consulting"
 
 read -p "Chemin du site [$DEFAULT_PATH]: " SITE_PATH
 SITE_PATH=${SITE_PATH:-$DEFAULT_PATH}
