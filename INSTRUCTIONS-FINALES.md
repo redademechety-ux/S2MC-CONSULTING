@@ -242,7 +242,7 @@ sudo ./update-nginx.sh
 → La configuration Nginx inclut le support React Router
 
 **4. SSL ne fonctionne pas**
-→ Relancez : `sudo certbot --nginx -d S2MC-consulting.com`
+→ Relancez : `sudo certbot --nginx -d s2mc-consulting.com`
 
 ---
 
