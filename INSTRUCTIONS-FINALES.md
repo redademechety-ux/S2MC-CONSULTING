@@ -262,7 +262,7 @@ sudo ./update-nginx.sh
 - [ ] Configurer SSL (via le script ou manuellement)
 
 ### Vérification
-- [ ] Le site s'affiche sur http://S2MC-consulting.com
+- [ ] Le site s'affiche sur http://s2mc-consulting.com
 - [ ] HTTPS fonctionne (si SSL configuré)
 - [ ] Toutes les sections sont visibles
 - [ ] La navigation fonctionne
