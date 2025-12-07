@@ -171,7 +171,7 @@ The website follows the **Pixel Pushers design system** with:
 
 ## 🌐 Live Website
 
-**Domain**: S2MC-consulting.com  
+**Domain**: s2mc-consulting.com  
 **Hosted on**: Nginx Linux Server
 
 ### Site Sections
