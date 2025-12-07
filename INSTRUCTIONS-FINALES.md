@@ -208,9 +208,9 @@ sudo ./update-nginx.sh
 
 ## 📞 Informations du Site
 
-**Domaine** : S2MC-consulting.com  
+**Domaine** : s2mc-consulting.com  
 **Serveur** : Nginx  
-**Localisation fichiers** : /var/www/S2MC-consulting/  
+**Localisation fichiers** : /var/www/s2mc-consulting/  
 
 **Contact S2MC Consulting** :
 - 📍 1021 E Lincolnway Unit #1375, Cheyenne, WY 82001
