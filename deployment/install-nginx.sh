@@ -38,8 +38,8 @@ fi
 print_success "Script lancé en tant que root"
 
 # Configuration par défaut
-DEFAULT_DOMAIN="S2MC-consulting.com"
-DEFAULT_PATH="/var/www/S2MC-consulting"
+DEFAULT_DOMAIN="s2mc-consulting.com"
+DEFAULT_PATH="/var/www/s2mc-consulting"
 
 # Demander le nom de domaine
 read -p "Entrez votre nom de domaine [$DEFAULT_DOMAIN]: " DOMAIN_NAME
